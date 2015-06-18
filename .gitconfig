@@ -1,0 +1,18 @@
+[push]
+	default = matching
+
+[alias]
+  c      = checkout
+	undo   = reset --soft HEAD^
+	rs     = reset --hard
+	s      = status
+	cm     = commit -m
+	cam    = commit -am
+  a      = add -u
+  aa     = add -A
+  l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
+  ll     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s%n%w(90,4,4)%-b'
+  last   = diff HEAD^1
+
+[core]
+	editor = vim
