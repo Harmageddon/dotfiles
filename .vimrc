@@ -9,3 +9,6 @@ set autoindent
 set cindent
 set number
 set mouse=a
+
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+

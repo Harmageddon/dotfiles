@@ -9,7 +9,7 @@ If you want to use one of the configuration files in addition to your own files,
 source /path/to/another/.bash_aliases
 ```
 
-### .gitconfig.
+### .gitconfig
 ```
 [include]
   path = /path/to/another/.gitconfig
