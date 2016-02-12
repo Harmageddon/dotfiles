@@ -9,6 +9,8 @@ set autoindent
 set cindent
 set number
 set mouse=a
+syntax on
+filetype indent plugin on
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
