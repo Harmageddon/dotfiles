@@ -20,9 +20,9 @@ source /path/to/another/.bash_aliases
 ### .rcsettings.sh
 The **.bashrc** includes coloring of the bash prompt. If you want to configure these colors, create a file named **~/.rcsettings.sh** with the following contents:
 ```bash
-COLOR_USER=$TERM_FG_? # Color for the user name, defaults to none.
-COLOR_HOST=$TERM_FG_? # Color for the host name, defaults to none.
-COLOR_ROOT=$TERM_FG_? # Color for the user name if bash is run as root, defaults to red.
+COLOR_USER=$TERM_FG_NONE # Color for the user name, defaults to none.
+COLOR_HOST=$TERM_FG_NONE # Color for the host name, defaults to none.
+COLOR_ROOT=$TERM_FG_RED # Color for the user name if bash is run as root, defaults to red.
 ```
 You can use the colors listed below.
 
