@@ -13,6 +13,9 @@
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
   ll     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s%n%w(90,4,4)%-b'
   last   = diff HEAD^1
+
+  # Credits for pr and pr-clean to Corey Frang (gnarf)
+  # https://gist.github.com/gnarf/5406589
   pr  = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
   pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 
