@@ -13,6 +13,8 @@
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
   ll     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s%n%w(90,4,4)%-b'
   last   = diff HEAD^1
+  pr  = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 
 [core]
   editor = vim
