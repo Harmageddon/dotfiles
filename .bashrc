@@ -1,7 +1,10 @@
 # Change to the directory of this file
 MY_DIR=$(dirname $BASH_SOURCE)
 CALLED_FROM=$PWD
-cd $DIR
+
+if [ $MY_DIR ]; then
+    cd $MY_DIR
+fi
 
 # Bash aliases
 if [ -f .bash_aliases ]; then
@@ -62,9 +65,11 @@ if [ $USER = "root" ]; then
 fi
 
 #### Custom prompt ####
-PS1=${COLOR_USER}'\u'${TERM_FG_NONE}'\
-'$TERM_FG_GRAY'@'${COLOR_HOST}'\h'${TERM_FG_NONE}'\
-:\w\
+PS1=${COLOR_USER}'\u'${TERM_FG_NONE}
+if [ -z $HIDE_HOST ] || [ $HIDE_HOST -ne 1 ]; then
+  PS1=$PS1$TERM_FG_GRAY'@'${COLOR_HOST}'\h'${TERM_FG_NONE}
+fi
+PS1=$PS1':\w\
 '${TERM_FG_BLUE}'$(__git_ps1 " (%s)")'${TERM_FG_NONE}'\
 \$ '
 
