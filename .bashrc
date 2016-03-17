@@ -1,3 +1,8 @@
+# Change to the directory of this file
+MY_DIR=$(dirname $BASH_SOURCE)
+CALLED_FROM=$PWD
+cd $DIR
+
 # Bash aliases
 if [ -f .bash_aliases ]; then
     source .bash_aliases
@@ -62,4 +67,7 @@ PS1=${COLOR_USER}'\u'${TERM_FG_NONE}'\
 :\w\
 '${TERM_FG_BLUE}'$(__git_ps1 " (%s)")'${TERM_FG_NONE}'\
 \$ '
+
+# My job here is done, cd back to the directory where I was called from.
+cd $CALLED_FROM
 
