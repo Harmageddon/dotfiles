@@ -11,6 +11,12 @@ if [ -f .bash_aliases ]; then
     source .bash_aliases
 fi
 
+# Functions
+md() {
+  path=/tmp/${1%.md}.html
+  pandoc -s -o $path $1 && xdg-open $path
+}
+
 #### Git integration ####
 # see: https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash
 
