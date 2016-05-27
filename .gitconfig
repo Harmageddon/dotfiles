@@ -12,6 +12,7 @@
   aa     = add -A
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
   ll     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s%n%w(90,4,4)%-b'
+  lm     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n          %Cblue%ae %n    %s'
   last   = diff HEAD^1
 
   # Credits for pr and pr-clean to Corey Frang (gnarf)
