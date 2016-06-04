@@ -1,4 +1,5 @@
 alias ll='ls -lav'
+alias suv='sudo vim'
 
 alias findlarge='find . -type f -size +5M -exec ls -hlog {} \; | sed -r -e "s/^(\S+\s+)(\S+\s+)(\S+\s+)(\S+\s+)(\S+\s+)(\S+\s+)/\3/g" | sort -hr'
 
