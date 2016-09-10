@@ -17,6 +17,10 @@ md() {
   pandoc -s -o $path $1 && xdg-open $path
 }
 
+mkcd() {
+  mkdir -p $1 && cd $1
+}
+
 #### Git integration ####
 # see: https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash
 
