@@ -21,6 +21,10 @@ mkcd() {
   mkdir -p $1 && cd $1
 }
 
+pssht() {
+  $@ > /dev/null 2>&1 &
+}
+
 #### Git integration ####
 # see: https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash
 
