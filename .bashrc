@@ -25,6 +25,9 @@ pssht() {
   $@ > /dev/null 2>&1 &
 }
 
+# Behavior of cd: Don't follow symlinks when changing directories
+set -o physical
+
 #### Git integration ####
 # see: https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash
 
