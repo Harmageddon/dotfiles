@@ -15,6 +15,7 @@
   lm     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n          %Cblue%ae %n    %s'
   last   = diff HEAD^1
   dh     = diff HEAD
+  dcsv   = diff --word-diff-regex="[^[:space:],]+"
 
   # Credits for pr and pr-clean to Corey Frang (gnarf)
   # https://gist.github.com/gnarf/5406589
