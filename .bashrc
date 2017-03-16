@@ -1,9 +1,9 @@
 # Change to the directory of this file
-MY_DIR=$(dirname $BASH_SOURCE)
+DOTFILES_LOCATION=$(dirname $BASH_SOURCE)
 CALLED_FROM=$PWD
 
-if [ $MY_DIR ]; then
-    cd $MY_DIR
+if [ $DOTFILES_LOCATION ]; then
+    cd $DOTFILES_LOCATION
 fi
 
 # Bash aliases
