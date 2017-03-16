@@ -7,4 +7,5 @@ alias findlarge='find . -type f -size +5M -exec ls -hlog {} \; | sed -r -e "s/^(
 alias xdebug_remote='ssh -R 9000:localhost:9000'
 
 alias gpush-all='for remote in $(git remote); do git push $remote; done'
+alias ginit='git init && bash $DOTFILES_LOCATION/git-email-prompt.sh'
 
