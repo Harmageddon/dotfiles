@@ -4,6 +4,7 @@
 
 # bash prompt which asks for email address
 # to configure for current git repository
+[ -n "$(git config user.email)" ] && exit 
 
 i=0
 IFS=' ' read -ra MAILS <<< $(git config user.emails)

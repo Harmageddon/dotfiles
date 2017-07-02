@@ -7,7 +7,8 @@
   rs     = reset --hard
   s      = status
   cm     = commit -m
-  cam    = commit -am
+  cm     = "!f() { git commit -m \"$1\"  || bash -ic '\"$DOTFILES_LOCATION/git-email-prompt.sh\"'; }; f"
+  cam    = "!f() { git commit -am \"$1\" || bash -ic '\"$DOTFILES_LOCATION/git-email-prompt.sh\"'; }; f"
   a      = add -u
   aa     = add -A
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
@@ -16,6 +17,7 @@
   last   = diff HEAD^1
   dh     = diff HEAD
   dcsv   = diff --word-diff-regex="[^[:space:],]+"
+  test = !echo $@ && echo 1 || echo 2
 
   # Credits for pr and pr-clean to Corey Frang (gnarf)
   # https://gist.github.com/gnarf/5406589
