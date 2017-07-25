@@ -14,6 +14,7 @@
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
   ll     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s%n%w(90,4,4)%-b'
   lm     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n          %Cblue%ae %n    %s'
+  lb     = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s' --branches
   last   = diff HEAD^1
   dh     = diff HEAD
   dcsv   = diff --word-diff-regex="[^[:space:],]+"
