@@ -18,7 +18,7 @@
   last   = diff HEAD^1
   dh     = diff HEAD
   dcsv   = diff --word-diff-regex="[^[:space:],]+"
-  test = !echo $@ && echo 1 || echo 2
+  d      = !git diff ${1}^1
 
   # Credits for pr and pr-clean to Corey Frang (gnarf)
   # https://gist.github.com/gnarf/5406589
