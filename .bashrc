@@ -91,5 +91,5 @@ PS1=$PS1':\w\
 \$ '
 
 # My job here is done, cd back to the directory where I was called from.
-cd $CALLED_FROM
+cd "$CALLED_FROM"
 
