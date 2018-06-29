@@ -1,3 +1,4 @@
+alias l='ls'
 alias ll='ls -lav'
 alias vim='vim -p'
 alias suv='sudo vim'
