@@ -25,6 +25,10 @@ pssht() {
   $@ > /dev/null 2>&1 &
 }
 
+zipall() {
+  rm $1 && zip -r $1 *
+}
+
 # Behavior of cd: Don't follow symlinks when changing directories
 set -o physical
 
