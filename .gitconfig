@@ -9,6 +9,7 @@
   cm     = commit -m
   cm     = "!f() { git commit -m \"$1\"  || bash -ic '\"$DOTFILES_LOCATION/git-email-prompt.sh\"'; }; f"
   cam    = "!f() { git commit -am \"$1\" || bash -ic '\"$DOTFILES_LOCATION/git-email-prompt.sh\"'; }; f"
+  ca     = commit --amend -a
   a      = add -u
   aa     = add -A
   l      = log --decorate=short --graph --date=local --pretty=format:'%Cgreen{%h}%Cblue %<|(40)%an %Cred %ad %C(auto) %d %n    %s'
