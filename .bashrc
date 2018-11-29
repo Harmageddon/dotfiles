@@ -29,6 +29,10 @@ zipall() {
   rm $1 && zip -r $1 *
 }
 
+cdd() {
+  cd $(printf "%0.s../" $(seq 1 $1 ));
+}
+
 # Behavior of cd: Don't follow symlinks when changing directories
 set -o physical
 
