@@ -85,7 +85,7 @@ if [ -z $COLOR_HOST ]; then
   COLOR_HOST=$TERM_FG_NONE
 fi
 
-if [ $USER = "root" ]; then
+if [[ $USER = "root" ]]; then
   COLOR_USER=$COLOR_ROOT
 fi
 
