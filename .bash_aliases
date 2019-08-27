@@ -12,4 +12,5 @@ alias ginit='git init && bash $DOTFILES_LOCATION/git-email-prompt.sh'
 
 alias yaourt-update='yaourt -Syu --aur'
 alias pac-update='sudo pacman -Syyu'
+alias srs='sudo systemctl restart'
 
